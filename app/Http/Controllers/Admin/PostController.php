@@ -60,7 +60,7 @@ class PostController extends Controller
         $filePath = str_replace('\\', '/', $filePath);
 
         if (!file_exists($filePath)) {
-            mkdir($filePath, '0775', true);
+            mkdir($filePath, '0777', true);
         }
 
         if ($request->hasFile('thumbnail_picture')) {
