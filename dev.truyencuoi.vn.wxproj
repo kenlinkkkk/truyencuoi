@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<winginx>
+  <project>
+    <name>dev.truyencuoi.vn</name>
+    <url>http://dev.truyencuoi.vn/</url>
+    <root>home/dev.truyencuoi.vn</root>
+  </project>
+</winginx>
