@@ -6,11 +6,11 @@
 
 @section('content')
     @foreach($posts as $post)
-        <div class="row">
-            <div class="col-sm-4 col-md-2">
+        <div class="row p-2">
+            <div class="col-4">
                 <img src="{{ asset($post->picture) }}" class="img-fluid">
             </div>
-            <div class="col-sm-8 col-md-10">
+            <div class="col-8">
                 <h4>{{ $post->name }}</h4>
                 <div style="line-height: 1.5em; height: 3em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%;">
                     {!! $post->content !!}
