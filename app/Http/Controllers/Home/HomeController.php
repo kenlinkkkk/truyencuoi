@@ -43,7 +43,7 @@ class HomeController extends Controller
 
     public function detailPost($category_tag, $post_tag) {
         $category = $this->categoryEloquentRepository->where('short_tag', $category_tag)[0];
-        $post = $this->postEloquentRepository->where('category_id', $category->id)->where('short_tag', '=', $post_tag)[0];
+        $post = Post::where('short_tag', '=', $post_tag)->first();
 
         $data = compact(
             'post',
