@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Post;
 use App\Repositories\Admin\CategoryEloquentRepository;
 use App\Repositories\Admin\PostEloquentRepository;
 use Illuminate\Http\Request;
@@ -17,7 +19,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $posts = $this->postEloquentRepository->edge('category');
+        $posts = Post::with('category')->where('status', '=', 1)->get();
 
         $data = compact(
             'posts'

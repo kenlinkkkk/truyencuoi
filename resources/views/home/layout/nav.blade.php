@@ -12,15 +12,12 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route('home.index') }}">Trang chủ</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home.listPost', ['truyen-dan-gian']) }}">Truyện dân gian</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home.listPost', ['truyen-nuoc-ngoai']) }}">Truyện nước ngoài</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home.listPost', ['anh-hai-huoc']) }}">Ảnh hài hước</a>
-                </li>
+                @php($categories = \App\Models\Category::where('status', '=', 1)->get())
+                    @foreach($categories as $category)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home.listPost', [$category->short_tag]) }}">{{ $category->name }}</a>
+                        </li>
+                    @endforeach
             </ul>
 {{--            <form class="form-inline my-2 my-lg-0">--}}
 {{--                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--}}

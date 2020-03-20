@@ -62,6 +62,19 @@
                                                 <input class="form-control" type="text" name="short_tag" value="{{ $category->short_tag }}">
                                             </div>
                                         </div>
+                                        <div class="form-group row">
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Trạng thái</label>
+                                            <div class="col-lg-9 col-xl-6">
+                                                <div class="kt-radio-inline">
+                                                    <label class="kt-radio kt-radio--success">
+                                                        <input type="radio" name="status" value="1" {{ $category->status == 1 ? 'checked' : '' }}> Active <span></span>
+                                                    </label>
+                                                    <label class="kt-radio kt-radio--success">
+                                                        <input type="radio" name="status" value="0" {{ $category->status == 0 ? 'checked' : '' }}> Deactive <span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 

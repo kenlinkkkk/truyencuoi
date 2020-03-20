@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="12d9f17c-045c-4411-8b21-ba9b402537cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/layout/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout/nav.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +169,7 @@
       <workItem from="1584516953880" duration="3082000" />
       <workItem from="1584583380445" duration="3494000" />
       <workItem from="1584602302147" duration="8564000" />
+      <workItem from="1584669877701" duration="2406000" />
     </task>
     <servers />
   </component>
@@ -175,6 +181,22 @@
       <screen x="0" y="30" width="2560" height="1410" />
     </state>
     <state x="1010" y="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.2560.1410/2560.390.1920.1050@0.30.2560.1410" timestamp="1584608034197" />
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom" timestamp="1584669892856">
+      <screen x="0" y="30" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="404" key="GridCell.Tab.0.bottom/0.30.2560.1410@0.30.2560.1410" timestamp="1584669892856" />
+    <state width="2517" height="404" key="GridCell.Tab.0.center" timestamp="1584669892856">
+      <screen x="0" y="30" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="404" key="GridCell.Tab.0.center/0.30.2560.1410@0.30.2560.1410" timestamp="1584669892856" />
+    <state width="2517" height="404" key="GridCell.Tab.0.left" timestamp="1584669892855">
+      <screen x="0" y="30" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="404" key="GridCell.Tab.0.left/0.30.2560.1410@0.30.2560.1410" timestamp="1584669892855" />
+    <state width="2517" height="404" key="GridCell.Tab.0.right" timestamp="1584669892856">
+      <screen x="0" y="30" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="404" key="GridCell.Tab.0.right/0.30.2560.1410@0.30.2560.1410" timestamp="1584669892856" />
     <state x="1011" y="550" key="NewPhpClassDialog" timestamp="1584607353765">
       <screen x="0" y="30" width="2560" height="1410" />
     </state>
