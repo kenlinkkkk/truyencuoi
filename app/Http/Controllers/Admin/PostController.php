@@ -36,10 +36,13 @@ class PostController extends Controller
     public function edit($id_post)
     {
         $post = $this->postRepository->find($id_post);
+        $categories = $this->categoryRepository->getAll();
+        $data = compact(
+            'post',
+            'categories'
+        );
 
-        $data = compact('post');
-
-        return view('admin.post.add', $data);
+        return view('admin.post.edit', $data);
     }
 
     public function create(Request $request)
@@ -89,6 +92,15 @@ class PostController extends Controller
     {
         $data = $request->except('_token');
 
+        $result = $this->postRepository->update($id_post, $data);
+
+        if ($result) {
+            $request->session()->flash('success', 'Thành công');
+        } else {
+            $request->session()->flash('error', 'Thất bại');
+        }
+
+        return redirect(route('admin.post.index'));
     }
 
     public function delete(Request $request, $id_post)

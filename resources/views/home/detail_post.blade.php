@@ -6,16 +6,16 @@
 
 @section('content')
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-2">
                 <img src="{{ asset($post->picture) }}" class="img-fluid">
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-5"></div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <h4>{{ $post->name }}</h4>
-                <p>{{ $post->content }}</p>
+                {!! $post->content !!}
             </div>
         </div>
 @endsection

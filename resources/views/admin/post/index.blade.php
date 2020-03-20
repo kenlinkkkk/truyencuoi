@@ -79,7 +79,7 @@
                                     <td scope="col">
                                         <form id="form-{{ $post->id }}" method="post" action="{{ route('admin.post.delete', [$post->id]) }}">
                                             @csrf
-{{--                                            <a href="{{ route('admin.post.edit', [$post->id]) }}" class="btn btn-success btn-sm">Sửa</a>--}}
+                                            <a href="{{ route('admin.post.edit', [$post->id]) }}" class="btn btn-success btn-sm">Sửa</a>
                                             <button type="submit" postId="{{ $post->id }}"class="btn btn-danger btn-sm btn-delete">Xóa</button>
                                         </form>
                                     </td>

@@ -80,7 +80,7 @@
                                         <div class="form-group row">
                                             <label class="col-cl-3 col-lg-3 col-form-label">Nội dung</label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <textarea class="form-control" name="content" style="height: 300px"></textarea>
+                                                <textarea class="tinymce form-control" name="content" style="height: 300px"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -122,5 +122,10 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/admin/js/pages/crud/file-upload/dropzonejs.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea.tinymce"
+        })
+    </script>
 @endsection

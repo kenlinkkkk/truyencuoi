@@ -6,13 +6,16 @@
 
 @section('content')
     @foreach($posts as $post)
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
+        <div class="row p-2">
+            <div class="col-sm-4 col-md-2">
                 <img src="{{ asset($post->picture) }}" class="img-fluid">
             </div>
-            <div class="col-sm-6 col-md-8">
+            <div class="col-sm-8 col-md-10">
                 <h4>{{ $post->name }}</h4>
-                <p>{{ substr($post->content, 0, 100) }} ...</p>
+                <div style="line-height: 1.5em; height: 3em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%;">
+                    {!! $post->content !!}
+                </div>
+                <p>...</p>
                 <a class="btn btn-sm btn-success" href="{{ route('home.detailPost', [$post->category->short_tag, $post->short_tag]) }}">Xem thêm</a>
             </div>
         </div>
