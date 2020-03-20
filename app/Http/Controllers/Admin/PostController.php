@@ -92,6 +92,28 @@ class PostController extends Controller
     {
         $data = $request->except('_token');
 
+        $day = date('d');
+        $month = date('m');
+        $year = date('Y');
+
+        $filePath = 'uploads/'. $year .'/'. $month .'/'. $day;
+        $filePath = str_replace('\\', '/', $filePath);
+
+        if (!file_exists($filePath)) {
+            mkdir($filePath, '0777', true);
+        }
+
+        if ($request->hasFile('thumbnail_picture')) {
+            $picture = $request->thumbnail_picture;
+            $thumbnail_name = $picture->getClientOriginalName();
+            $picture->move($filePath, $thumbnail_name);
+
+            $data['picture'] = $filePath.'/'.$thumbnail_name;
+        } else {
+            $request->session()->flash('error', 'Thêm mới thất bại');
+            return redirect(route('admin.post.index'));
+        }
+
         $result = $this->postRepository->update($id_post, $data);
 
         if ($result) {
