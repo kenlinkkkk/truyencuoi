@@ -12,7 +12,7 @@
             </div>
             <div class="col-8">
                 <h4>{{ $post->name }}</h4>
-                <div style="line-height: 1.5em; height: 3em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%;">
+                <div style="line-height: 1.6em; height: 3em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%;">
                     {!! $post->content !!}
                 </div>
                 <p>...</p>
